@@ -1,0 +1,13 @@
+{% load static %}
+<footer class="taskbar">
+    <div class="row" style="margin-right: 0px;">
+        <div class="col-8">
+            <a href="{% url 'home' %}" class="btn start-button"><img src="{% static 'assets/icons/homepage-1.png' %}" class="icon-16">Home</a>
+            <a href="{% url 'creations' %}" class="btn start-button"><img src="{% static 'assets/icons/briefcase-3.png' %}" class="icon-16">Creations</a>
+            <a href="{% url 'resume' %}" class="btn start-button"><img src="{% static 'assets/icons/directory_folder_options-5.png' %}" class="icon-16"> Resume</a>
+            <a href="{% url 'aboutme' %}" class="btn start-button"><img src="{% static 'assets/icons/magnifying_glass_3.png' %}" class="icon-16">About me</a>
+        </div>
+        <div class="col-4 time">Alex B</div>
+    </div>
+  
+</footer>

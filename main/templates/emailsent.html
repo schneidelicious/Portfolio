@@ -1,0 +1,99 @@
+
+
+            
+{% extends 'global.html' %}
+
+
+
+{% block content %}
+{% load static %}
+
+
+<div class="card-header" style="margin-top: 35px; text-align: center;">
+    <h4 class="my-0 font-weight-normal">EMAIL SENT SUCCESFULLY!</h4>
+</div>
+
+<div class="container " style="margin-top: 100px;">
+    <div class="card mb-4">
+        <div class="card-header">
+            <h4 class="my-0 font-weight-normal">About me</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-2">
+                    <img src="{% static 'assets/svidetel.png' %}" style="height: 256px;">
+                    <img src="{% static 'assets/svidetel.png' %}" style="height: 256px;">
+                    <img src="{% static 'assets/svidetel.png' %}" style="height: 256px;">
+                </div>
+                <div class="col">
+                    <p style="font-size: 20px; ">My name is Alex Schneider. The slav on the left is not me. Even before I bribed the principal to let me
+                      walk the stage on graduation day, I knew that for me, college would be a road to nowhere. Not even a week after the diploma was in my hand, I was on the sales floor at a car dealership taking ups
+                      and becoming a sponge for any knowledge that would result in more deals and less wasted time. Fast forward 10 months and I was 19 years old managing employees two to three times my age. 
+                      Playing football my whole life I gave out ass whoopings on the regular (it's true ask anyone) , but my 4 years in the car business taught me how to prosper on the recieving end of them. 
+                      The infinite hours deposited month after month were murdering the inner calling for creation that was eating me away since I started producing music at 16. I got comfortable enough to peel out
+                      and slip into something a little more sexy. Coding, Web Development and Online Marketing was a suprisingly seemless transition for me. I embraced the 6+ hours per day of blue light radiation and
+                    and tutorial videos because I became obsessed like I usually do. For better or worse, I became the kind of person who would rather die than make excuses and forfeit growth. I'm persistent, 
+                  passionate, self-driven, perceptive and hungry. The purpose of this website is to
+                  showcase the tools under my belt for anyone who might need them. I'm adept in many different coding languages including HTML/CSS/JAVA Web Development. I have experience ghostwriting high engagement 
+                  tweets and copywrighting for startups focused on conversions. I've just recently mastered Search Engine Optimization and Cold Email/Ad Campaigns as well.  
+
+                </p>
+                <p style="font-size: 20px;">Go check out the 'Creations' page to see examples of my work.</p>
+                <p style="font-size: 20px;">If you think I can help your business send me an email below or DM me on social.</p>
+                <p style="font-size: 20px;">Before I do anything I want to make sure we are a good fit.</p>
+             
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <img src="{% static 'assets/emailname.png' %}" alt="" style="height: 150px;">
+</div>
+
+<div class="container">
+    <div class="card mb-4">
+    <div class="card-header">
+        <h4 class="my-0 font-weight-normal">Inquiries</h4>
+        </div>
+      <div class="card-body">
+ <form action="{% url 'send_email' %}" method='POST' >
+   {% csrf_token %}
+  <div class="form-group row">
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><img src="{% static 'assets/icons/envelope_closed-1.png' %}" class="icon-16-4"> Your e-mail:</label>
+    <div class="col-sm-10">
+      <input name="email" class="form-95" id="inputEmail3">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="inputPassword3" class="col-sm-2 col-form-label"><img src="{% static 'assets/icons/user_world-0.png' %}" class="icon-16-4"> Your name:</label>
+    <div class="col-sm-10">
+      <input name="name" class="form-95" id="inputPassword3">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message content:</label>
+    <textarea name="message" class="form-95" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-3">Check it if you are spamer</div>
+    <div class="col-sm-9">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="gridCheck1">
+        <label class="form-check-label" for="gridCheck1">
+          Yes, I am spamer
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary" >Send email</button>
+    </div>
+  </div>
+</form>
+          </div>
+        </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,142 @@
+{% extends 'global.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>S C H N E I D E L I C I O U S</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <meta author="Alex B" />
+    <meta property="og:image" content="assets/preview.png" />
+
+
+</head>
+
+<body style="background-image: url({% static 'assets/clouds2.jpg' %}); color:#212529;">
+    {% include 'navbar.html' %}
+    {% block content %}
+    
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="text-center" style="text-align: center;font-size: 25pt;">SCHNEIDELICIOUS</h1>
+        <p class="lead">
+        <p class="lead">Programmer, Producer, Wed Designer, Marketer, Copywriter, Creator</p>
+        </p>
+    </div>
+
+    <div class="container" id="page-content">
+        <div class="row mb-5">
+            <div class="col-md-8 text-center">
+                <img src="{% static 'assets/dasme2.png' %}" class="img-fluid">
+            </div>
+            <div class="col-md-4 my-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal">Alex Schneider</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <li>Jack of all trades, master of some</li>
+                            <li>Creating 24/7</li>
+                            <li>Ridiculously handsome and jacked</li>
+                            <li>Based AND Redpilled</li>
+                            <li>Skilled at what matters most</li>
+                            <li>CREATING OPPORTUNITIES FOR YOU</li>
+                        </ul>
+                        <a href="{% url 'creations' %}" type="button" class="btn btn-lg btn-block">View my work</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <center><img class= portfolio src="{% static 'assets/pursuits.png' %}" style="width: 80%" ></center>
+</div>
+    <div class="container pt-5" id="prices">
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Soundcloud</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'assets/pngegg.png' %}" style="height: 156px">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>My Soundcloud Profile</li>
+                        <li>Been producing for 5 years</li>
+                        <li>Always dropping new music</li>
+                        <li>Stream tracks below.</li>
+                    </ul>
+                    <a type="button" target = "blank" href=https://soundcloud.com/schneidelicious class="btn btn-lg btn-block btn-outline-primary">LETS GO</a>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Based Plug</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'assets/BasedPlug.png' %}" style="height: 156px">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Nationalist Heaven</li>
+                        <li>Merch, Supplements, Inspiration</li>
+                        <li>Monument to beauty and creation</li>
+                        <li>Only for the based...</li>
+                    </ul>
+                    <a type="button" target = "blank" href=https://basedplug.com class="btn btn-lg btn-block btn-outline-primary">LETS GO</a>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm ">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Twitter</h4>
+                </div>
+                <div class="card-body">
+                    <img src="{% static 'assets/twat4.png' %}" style="height: 156px">
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>None of my work would be possible</li>
+                        <li>without being able to shitpost at the</li>
+                        <li>end of a long day.</li>
+                        <li>Follow me on twitter.</li>
+                    </ul>
+                    <a type="button" target = "blank" href=https://twitter.com/schneidelicious class="btn btn-lg btn-block btn-outline-primary">LETS GO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="card mb-4">
+            <div class="card-header">
+                <h4 class="my-0 font-weight-normal">Why let me create for you?</h4>
+            </div>
+            <div class="card-body">
+                <div class="row text-center">
+                    <div class="col">
+                        <img src="{% static 'assets/icons/calendar-1.png' %}">
+                        <h5 style="padding-top: 4px;">Delivery Speeds</h5>
+                        <p>Extreme ADHD and perfectionism means your projects are flawless and developed rapidly. </p>
+                    </div>
+                    <div class="col">
+                        <img src="{% static 'assets/icons/briefcase-4.png' %}">
+                        <h5 style="padding-top: 4px;">Transparency</h5>
+                        <p>Pricing is transparent and easy. No hidden add-ons. What we agree on, is what you pay.</p>
+                    </div>
+                    <div class="col">
+                        <img src="{% static 'assets/icons/address_book_pad_users.png' %}" style="height: 40px;">
+                        <h5 style="padding-top: 11px;">Flexible</h5>
+                        <p>I make sure I understand what YOU want in your project. Precision of concept comes first.</p>
+                    </div>
+                    <div class="col">
+                        <img src="{% static 'assets/icons/directory_explorer-0.png' %}">
+                        <h5 style="padding-top: 4px;">One Stop Shop</h5>
+                        <p>Skill versatility saves you time and money. Solutions available for all aspects of any startup.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+</body>
+
+</html>
